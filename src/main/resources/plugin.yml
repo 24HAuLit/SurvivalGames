@@ -1,0 +1,17 @@
+name: HungerGames
+version: '${project.version}'
+main: com.hungergames.HungerGamesPlugin
+description: Single-arena Hunger Games for Spigot 1.8.8 and Minecraft 1.8.9 clients.
+author: HungerGames
+commands:
+  hungergames:
+    description: Join, leave, or manage Hunger Games.
+    aliases: [hg, sg]
+    usage: /<command> help
+permissions:
+  hungergames.play:
+    description: Join and leave Hunger Games matches.
+    default: true
+  hungergames.admin:
+    description: Set up and control the arena.
+    default: op

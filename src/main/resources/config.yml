@@ -1,0 +1,46 @@
+# Spigot 1.8.8 server API; compatible with Minecraft 1.8.9 clients.
+# Set locations in-game with /hg setlobby, /hg setcenter and /hg addspawn.
+arena:
+  # Horizontal circular boundary, centered on /hg setcenter.
+  radius: 150.0
+
+game:
+  min-players: 2
+  max-players: 24
+  countdown-seconds: 30
+  grace-seconds: 30
+  # Running phase before deathmatch (not including grace).
+  deathmatch-after-seconds: 600
+  # Enter deathmatch early at this number of survivors; 0 disables early entry.
+  deathmatch-players: 3
+  deathmatch-seconds: 180
+  # Circle shrinks from arena.radius to this radius during deathmatch.
+  deathmatch-radius: 10.0
+  # Damage in half-hearts per second outside the shrinking circle.
+  border-damage: 4.0
+  ending-seconds: 10
+  # Refill opened arena chests once this many running seconds have elapsed.
+  # 0 disables the refill. Unopened chests get fresh loot on first use.
+  chest-refill-seconds: 300
+
+loot:
+  min-items: 3
+  max-items: 6
+  # Bukkit 1.8 material names. 'data' optionally specifies legacy durability/data.
+  entries:
+    - {material: WOOD_SWORD, min: 1, max: 1, weight: 12}
+    - {material: STONE_SWORD, min: 1, max: 1, weight: 6}
+    - {material: IRON_SWORD, min: 1, max: 1, weight: 1}
+    - {material: BOW, min: 1, max: 1, weight: 5}
+    - {material: ARROW, min: 3, max: 8, weight: 10}
+    - {material: LEATHER_HELMET, min: 1, max: 1, weight: 8}
+    - {material: LEATHER_CHESTPLATE, min: 1, max: 1, weight: 8}
+    - {material: LEATHER_LEGGINGS, min: 1, max: 1, weight: 8}
+    - {material: LEATHER_BOOTS, min: 1, max: 1, weight: 8}
+    - {material: CHAINMAIL_CHESTPLATE, min: 1, max: 1, weight: 3}
+    - {material: IRON_HELMET, min: 1, max: 1, weight: 2}
+    - {material: COOKED_BEEF, min: 1, max: 3, weight: 12}
+    - {material: BREAD, min: 1, max: 3, weight: 12}
+    - {material: APPLE, min: 1, max: 2, weight: 8}
+    - {material: GOLDEN_APPLE, min: 1, max: 1, weight: 1}
+    - {material: FISHING_ROD, min: 1, max: 1, weight: 3}
